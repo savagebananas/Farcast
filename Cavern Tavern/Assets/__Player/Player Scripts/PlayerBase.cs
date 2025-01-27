@@ -88,7 +88,7 @@ public class PlayerBase : MonoBehaviour
     private IEnumerator knockbackCo()
     {
         yield return new WaitForSeconds(knockbackDuration);
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         isHurt = false;
     }
 

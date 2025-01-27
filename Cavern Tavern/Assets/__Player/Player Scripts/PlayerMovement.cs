@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         inputMovement.Normalize();
         if (playerBase.isHurt == false)
         {
-            characterBody.velocity = inputMovement * activeMoveSpeed; 
+            characterBody.linearVelocity = inputMovement * activeMoveSpeed; 
         }
     }
 
@@ -100,6 +100,6 @@ public class PlayerMovement : MonoBehaviour
     public void DisableMovement()
     {
         canMove = false;
-        characterBody.velocity = new Vector2(0, 0);
+        characterBody.linearVelocity = new Vector2(0, 0);
     }
 }

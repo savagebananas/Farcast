@@ -92,7 +92,7 @@ public class EnemyHurt : State
 
             yield return new WaitForSeconds(knockbackDuration * weaponMultiplier);
             
-            rb.velocity = Vector2.zero; //stop velocity (knockback)
+            rb.linearVelocity = Vector2.zero; //stop velocity (knockback)
 
             squashAnimator.SetTrigger("Idle"); //stop squishing enemy
 
@@ -116,7 +116,7 @@ public class EnemyHurt : State
 
             yield return new WaitForSeconds(knockbackDuration * weaponMultiplier);
             
-            rb.velocity = Vector2.zero; //stop velocity (knockback)
+            rb.linearVelocity = Vector2.zero; //stop velocity (knockback)
             squashAnimator.SetTrigger("Idle"); //stop squishing enemy
             stateMachineManager.setNewState(followState); //Enemy changes to attack state after hurt
         }
